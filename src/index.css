@@ -1,13 +1,457 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --nav-fot-bg-color: #E7E3EE;
+  --benar-text: #ffff;
+}
+
+.container {
+  max-width: 1280px !important;
+  height: auto;
+  margin: 0px auto;
+}
+
+.bg_color {
+  background-color: var(--nav-fot-bg-color);
+}
+
+header {
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+header>nav>.logo>img {
+  width: 50px;
+}
+
+.nav-lionk>ul>li>a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: #564873;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+}
+
+.nav-lionk>ul>li>a::after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  background-color: #564873;
+  transition: 300ms linear;
+}
+
+
+/* .nav-lionk>ul>li>a::before {
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  background-color: #564873;
+  transition: 300ms linear;
+}
+
+.nav-lionk>ul>li>a:hover:before {
+  width: 100%;
+  right: 0;
+} */
+
+.nav-lionk>ul>li>a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+
+header>nav>.nav-icon>ul>li>.icons {
+  height: 30px;
+  width: 22px;
+  fill: #4F4E4E;
+}
+
+/* ------------- benar section start ----------- */
+
+.benar-slider {
+  width: 100%;
+  height: 100vh;
+  margin: 0px auto;
+}
+
+.swiper .benar-slide {
+  width: 100%;
+  height: 100%;
+  background-color: var(--nav-fot-bg-color);
+  background-image: url(./image/benar_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.swiper .benar-slide .benar-con {
+  width: 43%;
+  position: absolute;
+  bottom: 13%;
+  left: 5%;
+  background: #7365a84a;
+  padding: 20px;
+  border-radius: 11px;
+}
+
+.swiper .benar-slide .benar-con h1 {
+  color: var(--benar-text);
+  font-family: 'Poppins', sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.swiper .benar-slide .benar-con p {
+  color: var(--benar-text);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.swiper .benar-slide .benar-con a {
+  padding: 10px 30px;
+  display: block;
+  width: fit-content;
+  margin-top: 21px;
+  color: #ffff;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 30px;
+  background: #8577B0;
+  box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 40%);
+  transition: 200ms linear;
+}
+
+.swiper .benar-slide .benar-con a:hover {
+  background-color: #fff;
+  color: #4F4E4E;
+  font-weight: 500;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 20px !important;
+  font-weight: 700;
+  color: #f0f8ffe0;
+  background-color: #00000070;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* ------------ about componet style ----------- */
+
+.about h2 {
+  color: #454545;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.text {
+  color: #4F4E4E;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.shop-btn {
+  text-decoration: none;
+  font-size: 14px;
+  background-color: #fff;
+  padding: 7px 26px;
+  color: #454545;
+  font-weight: 500;
+  border-radius: 30px;
+  background: #F8F8F8;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: 200ms linear;
+}
+
+.shop-btn:hover {
+  background-color: #8577B0;
+  color: #ffff;
+}
+
+.about img {
+  width: 30% !important;
+}
+
+/* ------------- Product section  ----------  */
+
+.section_title h2 {
+  color: #424242;
+  font-family: 'Poppins', sans-serif;
+  /* text-transform: capitalize; */
+}
+
+p {
+  color: #757575;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+#product .product-slider {
+  height: 300px !important;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+#product .product-slider .swiper-wrapper {
+  height: auto !important;
+}
+
+#product .swiper img {
+  width: 80%;
+}
+
+footer {
+  background-color: var(--nav-fot-bg-color);
+}
+
+
+footer .f-link ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 15px;
+}
+
+footer .f-link ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #757575;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer .f-add ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 15px;
+}
+
+footer .f-add ul li strong {
+  font-weight: 800;
+  color: #464343;
+}
+
+footer .f-add ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #757575;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+/* ---------- cart page ---------  */
+
+.cart {
+  box-shadow: rgb(99 99 99 / 39%) 0px 2px 8px 0px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.cart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3f51b52e;
+  z-index: -1;
+  transition: 200ms linear;
+}
+
+.cart:hover:before {
+  left: 0;
+}
+
+.cart img {
+  width: 75%;
+}
+
+.cart .icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: all 0.4s;
+  z-index: 999;
+}
+
+.cart:hover .icon {
+  opacity: 1;
+}
+
+.cart .icon svg {
+  height: 30px;
+  width: 30px;
+  fill: #545454;
+  cursor: pointer;
+}
+
+.cart .det h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin-top: 19px;
+  font-weight: 600;
+  color: #373737;
+}
+
+.cart .det h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FF5722;
+  margin-top: 13px;
+}
+
+.cart_box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+.modal p {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  width: 90%;
+}
+
+.modal .add {
+  background-color: #8577b0;
+  padding: 8px 30px;
+  border: none;
+  transition: 200ms linear;
+}
+
+@media screen and (min-width:992px) {
+  .cart {
+    width: 22% !important;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .about .row {
+    row-gap: 30px;
+  }
+
+  .about img {
+    width: 25% !important;
+  }
+
+  .swiper .benar-slide .benar-con {
+    width: 58%;
+  }
+
+  .swiper .benar-slide .benar-con h1 {
+    font-size: 23px;
+  }
+
+  #product .dis p {
+    width: 75% !important;
+  }
+
+  #product .swiper {
+    text-align: center;
+    overflow: hidden;
+  }
+
+  #product .swiper img {
+    width: 90%;
+  }
+
+  footer p {
+    font-size: 15px
+  }
+
+  footer a {
+    font-size: 15px
+  }
+}
+
+@media screen and (max-width:600px) {
+  .swiper .benar-slide .benar-con {
+    width: 90%;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 9px !important;
+  }
+
+  .modal-dialog {
+    max-width: 95% !important;
+  }
+
+  
+.modal p {
+  width: 100%;
+}
+}
+
+@media screen and (max-width:580px) {
+  .nav-lionk ul {
+    gap: 1rem !important;
+
+  }
+
+  .nav-icon ul {
+    gap: 1.2rem !important;
+  }
+
+  #product .dis p {
+    width: 90% !important;
+    font-size: 15px;
+  }
+
+  #product .product-slider {
+    height: auto !important;
+  }
 }
