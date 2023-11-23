@@ -79,8 +79,7 @@ header>nav>.logo>img {
   left: 0;
 }
 
-
-header>nav>.nav-icon>ul>li>.icons {
+.icons {
   height: 30px;
   width: 22px;
   fill: #4F4E4E;
@@ -324,13 +323,13 @@ footer .f-add ul li a {
 }
 
 .cart .icon svg {
-  height: 30px;
-  width: 30px;
+  height: 18px;
+  width: 28px;
   fill: #545454;
   cursor: pointer;
 }
 
-.cart .det h3 {
+.det h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   margin-top: 19px;
@@ -338,7 +337,7 @@ footer .f-add ul li a {
   color: #373737;
 }
 
-.cart .det h4 {
+.det h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -370,6 +369,18 @@ footer .f-add ul li a {
   border: none;
   transition: 200ms linear;
 }
+
+.pro {
+  background-color: #9d9d9d24;
+  padding: 10px 10px;
+}
+
+table thead tr th {
+  /* color: red !important; */
+}
+
+
+
 
 @media screen and (min-width:992px) {
   .cart {
@@ -430,10 +441,10 @@ footer .f-add ul li a {
     max-width: 95% !important;
   }
 
-  
-.modal p {
-  width: 100%;
-}
+
+  .modal p {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width:580px) {

@@ -25,7 +25,7 @@ const Benar = () => {
                         navigation
                         loop={true}
                         autoplay={true}
-                        onSwiper={(swiper) => console.log(swiper)}
+                        onSwiper={(swiper) => swiper}
                         onSlideChange={() => console.log('slide change')}
                         className="benar-slider"
                     >

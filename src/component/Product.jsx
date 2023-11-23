@@ -11,7 +11,7 @@ import 'swiper/css/autoplay';
 
 const Product = () => {
 
-    return(
+    return (
         <>
             <div id="product" className="py-5">
                 <div className="section_title">
@@ -26,26 +26,26 @@ const Product = () => {
                         spaceBetween={50}
                         slidesPerView={4}
                         navigation
-                        loop = {true}
-                        autoplay = {false}
+                        loop={true}
+                        autoplay={false}
                         breakpoints={{
                             0: {
-                                slidesPerView : 1,
+                                slidesPerView: 1,
                                 // spaceBetween: 10
                             },
 
                             580: {
-                                slidesPerView : 2,
+                                slidesPerView: 2,
                                 // spaceBetween: 10
                             },
 
                             700: {
-                                slidesPerView : 3,
+                                slidesPerView: 3,
                                 // spaceBetween: 10
                             },
 
                             992: {
-                                slidesPerView : 4,
+                                slidesPerView: 4,
                                 // spaceBetween: 10
                             }
                         }}
@@ -53,23 +53,23 @@ const Product = () => {
                         onSlideChange={() => console.log('slide change')}
                         className="container product-slider mt-5">
                         <SwiperSlide>
-                               <img src="https://themewagon.github.io/furni/images/product-1.png" alt="" />
-                        </SwiperSlide>
-  <img src="https://themewagon.github.io/furni/images/product-1.png" alt="" />
-                        <SwiperSlide>
-                        <img src="https://themewagon.github.io/furni/images/product-1.png" alt="" />
+                            <img src="https://themewagon.github.io/furni/images/product-1.png" alt="" />
                         </SwiperSlide>
 
                         <SwiperSlide>
-                        <img src="https://themewagon.github.io/furni/images/product-1.png" alt="" />
+                            <img src="https://themewagon.github.io/furni/images/product-1.png" alt="" />
                         </SwiperSlide>
 
                         <SwiperSlide>
-                              <img src="https://themewagon.github.io/furni/images/product-1.png" alt="" />
+                            <img src="https://themewagon.github.io/furni/images/product-1.png" alt="" />
                         </SwiperSlide>
 
                         <SwiperSlide>
-                              <img src="https://themewagon.github.io/furni/images/product-1.png" alt="" />
+                            <img src="https://themewagon.github.io/furni/images/product-1.png" alt="" />
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <img src="https://themewagon.github.io/furni/images/product-1.png" alt="" />
                         </SwiperSlide>
                     </Swiper>
                 </div>

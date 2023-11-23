@@ -3,6 +3,15 @@ import React from "react";
 import { FaRegHeart } from "react-icons/fa6";
 import { FaShareAlt } from "react-icons/fa";
 
+
+import { Navigation, Autoplay, A11y } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 // ---------- img --------------
 import img_1 from '../image/home-img-1.png'
 
@@ -11,10 +20,6 @@ const Cart = (props) => {
 
     const arr = [{ image: img_1, name: 'Chear', price: '30' }, { image: img_1, name: 'Chear', price: '30' }, { image: img_1, name: 'Chear', price: '30' }, { image: img_1, name: 'Chear', price: '30' }]
 
-    const hednleCart = () => {
-        console.log('hello');
-        alert()
-    }
 
     return (
         <>
@@ -35,17 +40,99 @@ const Cart = (props) => {
                                             <h3>Chear</h3>
                                             <h4>$20</h4>
                                         </div>
-                                        <div className="cart_box" onClick={()=> props.setDetailsModal(true)}></div>
+                                        <div className="cart_box" onClick={() => props.setDetailsModal(true)}></div>
                                     </div>
                                 </>
                             )
                         })
                     }
-{/* 
-                    <div className="col-md-3">md</div>
-                    <div className="col-md-3">md</div>
-                    <div className="col-md-3">md</div> */}
                 </div>
+
+                <div className="container my-5">
+                    <Swiper
+                        // install Swiper modules
+                        modules={[Navigation, Autoplay, A11y]}
+                        spaceBetween={50}
+                        slidesPerView={4}
+                        navigation
+                        loop={true}
+                        autoplay={false}
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                                // spaceBetween: 10
+                            },
+
+                            580: {
+                                slidesPerView: 2,
+                                // spaceBetween: 10
+                            },
+
+                            700: {
+                                slidesPerView: 3,
+                                // spaceBetween: 10
+                            },
+
+                            992: {
+                                slidesPerView: 4,
+                                // spaceBetween: 10
+                            }
+                        }}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log('slide change')}
+                        className="container product-slider mt-5">
+                        <SwiperSlide>
+                            <div className="col-lg-10 pro rounded-3 mx-auto">
+                                <img src="https://themewagon.github.io/furni/images/product-1.png" className="w-100" alt="" />
+                                <div className="det text-center">
+                                    <h3>Chear</h3>
+                                    <h4>$20</h4>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="col-lg-10 pro rounded-3 mx-auto">
+                                <img src="https://themewagon.github.io/furni/images/product-1.png" className="w-100" alt="" />
+                                <div className="det text-center">
+                                    <h3>Chear</h3>
+                                    <h4>$20</h4>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="col-lg-10 pro rounded-3 mx-auto">
+                                <img src="https://themewagon.github.io/furni/images/product-1.png" className="w-100" alt="" />
+                                <div className="det text-center">
+                                    <h3>Chear</h3>
+                                    <h4>$20</h4>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="col-lg-10 pro rounded-3 mx-auto">
+                                <img src="https://themewagon.github.io/furni/images/product-1.png" className="w-100" alt="" />
+                                <div className="det text-center">
+                                    <h3>Chear</h3>
+                                    <h4>$20</h4>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="col-lg-10 pro rounded-3 mx-auto">
+                                <img src="https://themewagon.github.io/furni/images/product-1.png" className="w-100" alt="" />
+                                <div className="det text-center">
+                                    <h3>Chear</h3>
+                                    <h4>$20</h4>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+
             </div>
         </>
     )
